@@ -47,6 +47,7 @@ export default function ContactForm() {
 	const onSubmit = async (values: ContactFormValues) => {
 		// Simulate async submit
 		await new Promise((res) => setTimeout(res, 900));
+		console.log("Submitted values: ", values);
 		toast.success(t("success.title"), {
 			description: t("success.description"),
 			position: "bottom-center",

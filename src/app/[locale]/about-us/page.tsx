@@ -1,5 +1,4 @@
 import AboutUsHero from "@/components/pages/about-us/about-us-hero";
-import HomePageHero from "@/components/pages/home-page/home-page-hero";
 import { generateLocaleMetadata } from "@/lib/generate-locale-metadata";
 import { Metadata } from "next";
 
