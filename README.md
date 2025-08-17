@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Website Template
 
-## Getting Started
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-15-black" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB" />
+  <img src="https://img.shields.io/badge/Tailwind-4.0-38B2AC" />
+  <img src="https://img.shields.io/badge/ShadCN-UI-111827" />
+  <img src="https://img.shields.io/badge/Framer%20Motion-Animations-0055FF" />
+  <img src="https://img.shields.io/badge/i18n-next--intl-7A5AF8" />
+  <img src="https://img.shields.io/badge/TypeScript-Strict-3178C6" />
+  <img src="https://img.shields.io/badge/Deploy-Vercel-000000" />
+</p>
 
-First, run the development server:
+> ⚡️ A production-ready Next.js starter focused on speed, theming, and clean DX.  
+> Built with Tailwind v4, ShadCN UI, Framer Motion, and next-intl.
+
+---
+
+## ✨ Features
+
+- [**Next.js 15 + React 19**](https://nextjs.org/docs) — App Router, server components, SSR/ISR  
+- [**Tailwind CSS v4**](https://tailwindcss.com/docs) — Design tokens, modern utilities, custom palettes  
+- [**ShadCN UI**](https://ui.shadcn.com/docs) — Accessible, easily themed component primitives  
+- [**Framer Motion**](https://www.framer.com/motion/) — Ready-made animation variants (stagger, entrances)  
+- [**Internationalization (next-intl)**](https://next-intl-docs.vercel.app/) — Locale routing & translations  
+- [**Theming (next-themes)**](https://github.com/pacocoursey/next-themes) — Dark/light switch with custom palettes  
+- [**SEO defaults**](https://nextjs.org/docs/app/building-your-application/optimizing/metadata) — Metadata helpers per route  
+- [**Clean structure**](https://nextjs.org/docs/app/building-your-application/routing) — Opinionated layout; componentized sections  
+- [**TypeScript strict**](https://www.typescriptlang.org/docs/) — Safer code, better editor hints  
+
+---
+
+## 🚀 Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 1) Install
+pnpm install        # or: npm i / yarn
+
+# 2) Run dev
+pnpm dev            # http://localhost:3000
+
+# 3) Build & start
+pnpm build
+pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Requires Node 18+.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌍 i18n
 
-## Learn More
+- Locale-aware routes using `next-intl`
+- Middleware respects URL locale (no auto-guessing)
+- Example pages: `/en/...` and `/es/...`
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Theming
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Tailwind v4 custom palettes  
+- Theme toggle via `next-themes`  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧱 Project Structure (excerpt)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/
+    [locale]/
+      (routes)/
+      layout.tsx
+      page.tsx
+  components/
+    ui/            # ShadCN components & wrappers
+    lib/           # Variants, utils, hooks
+    pages/         # Page sections (hero, features, etc.)
+  lib/
+    animation-variants.ts
+    generate-locale-metadata.ts
+  styles/
+    globals.css
+```
+
+---
+
+## 🧩 Included UI/UX Bits
+
+- Animated hero sections (waterfall/stagger)  
+- Reusable gradient backgrounds  
+- Cards with image backgrounds  
+- FAQ/Accordion with data-driven config  
+- Feature rows with motion  
+- Theme & language switchers  
+
+---
+
+## 🛠 Scripts
+
+```jsonc
+{
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "typecheck": "tsc --noEmit"
+}
+```
+
+---
+
+## 🔧 Environment
+
+Create `.env.local` as needed (examples):
+
+```bash
+# next-intl (if using custom config)
+NEXT_PUBLIC_DEFAULT_LOCALE=en
+NEXT_PUBLIC_SUPPORTED_LOCALES=en,es
+
+# If you fetch from APIs:
+NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
+```
+
+---
+
+## 📦 One-Click Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+> After importing from GitHub, Vercel will auto-build on push to `main`.
+
+---
+
+## 🖼 Preview
+
+Add a screenshot or demo GIF here once deployed:  
+
+```
+![Template Preview](public/images/preview.png)
+```
+
+---
+
+## 🗺 Roadmap
+
+- [ ] Demo content toggles (marketing vs. dashboard shells)  
+- [ ] More ready-to-ship sections (pricing, testimonials, blog)  
+- [ ] CMS recipe (Sanity/Contentlayer)  
+- [ ] Testing setup (Playwright + Vitest)  
+
+---
+
+## 🤝 Contributing
+
+1. Create a feature branch: `git checkout -b feat/your-thing`  
+2. Commit with conventional messages: `feat: add pricing section`  
+3. Open a PR to `development`, then merge to `main` when stable  
+
+---
+
+## 📄 License
+
+MIT — use freely, ship quickly.
