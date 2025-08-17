@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { overlayFadeUp, fadeIn } from "@/lib/animation-variants"; // 👈 import here
-import LocaleSwitcher from "@/components/locale-switcher/locale-switcher";
+import { fadeIn } from "@/lib/animation-variants";
 import { useTranslations } from "next-intl";
 import HeaderLogo from "./header-logo";
 import HeaderMobileToggle from "./header-mobile-toggle";
+import LocaleSwitcher from "@/components/locale-switcher/locale-switcher";
 
 type Props = { onClose: () => void };
 

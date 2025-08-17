@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { waterfallList, waterfallItem } from "@/lib/animation-variants";
 
@@ -19,9 +19,9 @@ export default function ContactHero() {
 					{hero("h1")}
 				</motion.h1>
 
-				<motion.p variants={waterfallItem} className="mt-2 text-lg text-muted-foreground md:text-xl">
+				<motion.h2 variants={waterfallItem} className="mt-2 text-lg text-muted-foreground md:text-xl">
 					{hero("h2")}
-				</motion.p>
+				</motion.h2>
 
 				{/* Optional CTA to the form anchor */}
 				{/* <motion.div variants={waterfallItem} className="mt-6">

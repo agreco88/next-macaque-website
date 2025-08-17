@@ -1,9 +1,8 @@
 // src/components/footer/footer-logo.tsx
 "use client";
 
-import { ChevronFirst, ChevronsUp, Triangle } from "lucide-react";
+import { Triangle } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 export default function FooterLogo() {
 	const t = useTranslations("Footer");
