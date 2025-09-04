@@ -1,110 +1,111 @@
 {
-	"Metadata": {
-		"home": {
-			"title": "Home | Next Website Starter Template (ShadCN)",
-			"description": "Kickstart your Next.js project with this fully styled, i18n-ready starter template.",
-			"ogDescription": "Build modern, responsive websites faster with the Next Website Starter Template.",
-			"keywords": "Next Website Starter Template, ShadCN, Next.js, Tailwind CSS, i18n, starter template"
-		},
-		"aboutUs": {
-			"title": "About Us | Next Website Starter Template (ShadCN)",
-			"description": "Learn more about the goals and features of the Next Website Starter Template.",
-			"ogDescription": "Discover how the Next Website Starter Template can accelerate your web development.",
-			"keywords": "Next Website Starter Template, ShadCN, About Us, Next.js, Tailwind CSS"
-		},
-		"contactUs": {
-			"title": "Contact Us | Next Website Starter Template (ShadCN)",
-			"description": "Get in touch with the team behind the Next Website Starter Template. We’d love to hear from you.",
-			"ogDescription": "Ask questions, share feedback, or collaborate with us.",
-			"keywords": "Next Website Starter Template, ShadCN, contact, feedback, support"
-		}
-	},
-	"HomePage": {
-		"title": "Welcome to the Next Website Starter Template (ShadCN)",
-		"description": "A ready-to-use, i18n-enabled, SSR, and Tailwind-powered starter template with ShadCN components."
-	},
-	"HomePageHero": {
-		"h1": "Welcome to the Next Website Starter Template",
-		"h2": "Your starting point for building modern, responsive websites with Next.js, Tailwind CSS, and ShadCN.",
-		"cta": "Learn more",
-		"cta2": "Read the docs"
-	},
-	"AboutUsHero": {
-		"h1": "About the Next Website Starter",
-		"h2": "A lightweight, i18n-ready Next.js template with Tailwind and ShadCN — perfect for shipping faster.",
-		"cta": "Contact us"
-	},
-	"ContactHero": {
-		"h1": "Get in touch",
-		"h2": "Questions, feedback, or ideas? We’d love to hear from you.",
-		"cta": "Send a message"
-	},
-	"ContactPage": {
-		"hero": {
-			"h1": "Contact us",
-			"description": "Have a question or idea? Fill out the form and we’ll get back to you as soon as possible."
-		}
-	},
-	"ContactForm": {
-		"optional": "Optional",
-		"firstName": "First Name",
-		"firstNamePlaceholder": "Your first name",
-		"lastName": "Last Name",
-		"lastNamePlaceholder": "Your last name",
-		"email": "Email",
-		"emailPlaceholder": "you@example.com",
-		"message": "Message",
-		"messagePlaceholder": "Write your message here...",
-		"phone": "Phone number",
-		"phonePlaceholder": "Write your phone number here...",
-		"company": "Company",
-		"companyPlaceholder": "Write the name of your company here...",
-		"sendMessage": "Send Message",
-		"sending": "Sending...",
-		"success": {
-			"title": "Message sent!",
-			"description": "Thanks for reaching out. We’ll get back to you soon."
-		},
-		"placeholders": {
-			"firstName": "Your first name",
-			"lastName": "Your last name",
-			"email": "you@example.com",
-			"message": "Write your message here...",
-			"company": "Write the name of the company you represent here"
-		},
-		"errors": {
-			"firstName": "First name is required",
-			"lastName": "Last name is required",
-			"email": "Enter a valid email address",
-			"message": "Message must be at least 10 characters",
-			"phone": "Phone number is not valid"
-		}
-	},
-	"Layout": {
-		"themeToggle": {
-			"light": "Light",
-			"dark": "Dark"
-		},
-		"header": {
-			"about-us": "About us",
-			"contact-us": "Contact us"
-		}
-	},
-	"LocaleSwitcher": {
-		"label": "Select language",
-		"english": "English",
-		"spanish": "Spanish"
-	},
-	"contactUs": {
-		"title": "Contact Us",
-		"description": "Get in touch with the team behind the Next Website Starter Template for questions, feedback, or collaboration ideas.",
-		"keywords": "Next Website Starter Template, ShadCN, contact, feedback, support",
-		"hero": {
-			"h1": "Let’s build something great together."
-		}
-	},
+  "Metadata": {
+    "home": {
+      "title": "Home | Next Website Starter Template (ShadCN)",
+      "description": "Kickstart your Next.js project with this fully styled, i18n-ready starter template.",
+      "ogDescription": "Build modern, responsive websites faster with the Next Website Starter Template.",
+      "keywords": "Next Website Starter Template, ShadCN, Next.js, Tailwind CSS, i18n, starter template"
+    },
+    "aboutUs": {
+      "title": "About Us | Next Website Starter Template (ShadCN)",
+      "description": "Learn more about the goals and features of the Next Website Starter Template.",
+      "ogDescription": "Discover how the Next Website Starter Template can accelerate your web development.",
+      "keywords": "Next Website Starter Template, ShadCN, About Us, Next.js, Tailwind CSS"
+    },
+    "contactUs": {
+      "title": "Contact Us | Next Website Starter Template (ShadCN)",
+      "description": "Get in touch with the team behind the Next Website Starter Template. We’d love to hear from you.",
+      "ogDescription": "Ask questions, share feedback, or collaborate with us.",
+      "keywords": "Next Website Starter Template, ShadCN, contact, feedback, support"
+    }
+  },
+  "HomePage": {
+    "title": "Welcome to the Next Website Starter Template (ShadCN)",
+    "description": "A ready-to-use, i18n-enabled, SSR, and Tailwind-powered starter template with ShadCN components."
+  },
+  "HomePageHero": {
+    "main": "MACAQUE™ PROTEIN BARS",
+    "subtitle": "THE BEST WAY TO CONSUME YOUR WHEY PROTEIN",
+    "subtext": "Forget about traditional shakes. MACAQUE™ PROTEIN BARS deliver 25 grams of premium whey protein in a delicious, customizable format — All built for your goals, traning and grind.",
+    "cta": "Build your own bar",
+    "cta2": "Why pick MACAQUE™?"
+  },
+  "AboutUsHero": {
+    "h1": "About the Next Website Starter",
+    "h2": "A lightweight, i18n-ready Next.js template with Tailwind and ShadCN — perfect for shipping faster.",
+    "cta": "Contact us"
+  },
+  "ContactHero": {
+    "h1": "Get in touch",
+    "h2": "Questions, feedback, or ideas? We’d love to hear from you.",
+    "cta": "Send a message"
+  },
+  "ContactPage": {
+    "hero": {
+      "h1": "Contact us",
+      "description": "Have a question or idea? Fill out the form and we’ll get back to you as soon as possible."
+    }
+  },
+  "ContactForm": {
+    "optional": "Optional",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Your first name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Your last name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "phone": "Phone number",
+    "phonePlaceholder": "Write your phone number here...",
+    "company": "Company",
+    "companyPlaceholder": "Write the name of your company here...",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "success": {
+      "title": "Message sent!",
+      "description": "Thanks for reaching out. We’ll get back to you soon."
+    },
+    "placeholders": {
+      "firstName": "Your first name",
+      "lastName": "Your last name",
+      "email": "you@example.com",
+      "message": "Write your message here...",
+      "company": "Write the name of the company you represent here"
+    },
+    "errors": {
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "email": "Enter a valid email address",
+      "message": "Message must be at least 10 characters",
+      "phone": "Phone number is not valid"
+    }
+  },
+  "Layout": {
+    "themeToggle": {
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "header": {
+      "about-us": "About us",
+      "contact-us": "Contact us"
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Select language",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "contactUs": {
+    "title": "Contact Us",
+    "description": "Get in touch with the team behind the Next Website Starter Template for questions, feedback, or collaboration ideas.",
+    "keywords": "Next Website Starter Template, ShadCN, contact, feedback, support",
+    "hero": {
+      "h1": "Let’s build something great together."
+    }
+  },
 
-	"Footer": {
-		"allRightsReserved": "All rights reserved."
-	}
+  "Footer": {
+    "allRightsReserved": "All rights reserved."
+  }
 }

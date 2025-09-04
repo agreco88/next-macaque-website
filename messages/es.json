@@ -1,109 +1,110 @@
 {
-	"Metadata": {
-		"home": {
-			"title": "Inicio | Next Website Starter Template (ShadCN)",
-			"description": "Inicia tu proyecto en Next.js con esta plantilla lista para usar, estilizada e i18n.",
-			"ogDescription": "Crea sitios web modernos y responsivos más rápido con la plantilla Next Website Starter.",
-			"keywords": "Next Website Starter Template, ShadCN, Next.js, Tailwind CSS, i18n, plantilla"
-		},
-		"aboutUs": {
-			"title": "Sobre Nosotros | Next Website Starter Template (ShadCN)",
-			"description": "Conoce los objetivos y características de la plantilla Next Website Starter Template.",
-			"ogDescription": "Descubre cómo la plantilla Next Website Starter puede acelerar tu desarrollo web.",
-			"keywords": "Next Website Starter Template, ShadCN, Sobre Nosotros, Next.js, Tailwind CSS"
-		},
-		"contactUs": {
-			"title": "Contáctanos | Next Website Starter Template (ShadCN)",
-			"description": "Ponte en contacto con el equipo detrás de la plantilla Next Website Starter. Nos encantaría saber de ti.",
-			"ogDescription": "Haz preguntas, comparte opiniones o colabora con nosotros.",
-			"keywords": "Next Website Starter Template, ShadCN, contacto, opiniones, soporte"
-		}
-	},
-	"HomePage": {
-		"title": "Bienvenido a la plantilla Next Website Starter Template (ShadCN)",
-		"description": "Una plantilla lista para usar, con i18n, SSR y potenciada con Tailwind, que incluye componentes de ShadCN."
-	},
-	"HomePageHero": {
-		"h1": "Bienvenido al Next Website Starter Template",
-		"h2": "Tu punto de partida para construir sitios web modernos y responsivos con Next.js, Tailwind CSS y ShadCN.",
-		"cta": "Sobre el template",
-		"cta2": "Leer la documentación"
-	},
-	"AboutUsHero": {
-		"h1": "Acerca de Next Website Starter",
-		"h2": "Una plantilla ligera para Next.js con i18n, Tailwind y ShadCN — ideal para lanzar más rápido.",
-		"cta": "Contáctanos"
-	},
-	"ContactHero": {
-		"h1": "Ponte en contacto",
-		"h2": "¿Preguntas, comentarios o ideas? Nos encantará leerte.",
-		"cta": "Enviar mensaje"
-	},
-	"ContactPage": {
-		"hero": {
-			"h1": "Contáctanos",
-			"description": "¿Tienes una pregunta o una idea? Completa el formulario y nos pondremos en contacto contigo lo antes posible."
-		}
-	},
-	"ContactForm": {
-		"optional": "Opcional",
-		"firstName": "Nombre",
-		"firstNamePlaceholder": "Tu nombre",
-		"lastName": "Apellido",
-		"lastNamePlaceholder": "Tu apellido",
-		"email": "Correo electrónico",
-		"emailPlaceholder": "tu@ejemplo.com",
-		"message": "Mensaje",
-		"messagePlaceholder": "Escribe tu mensaje aquí...",
-		"phone": "Número de teléfono",
-		"phonePlaceholder": "Escribe tu número de teléfono aquí...",
-		"company": "Empresa",
-		"companyPlaceholder": "Escribe el nombre de tu empresa aquí...",
-		"sendMessage": "Enviar mensaje",
-		"sending": "Enviando...",
-		"success": {
-			"title": "¡Mensaje enviado!",
-			"description": "Gracias por contactarnos. Te responderemos pronto."
-		},
-		"placeholders": {
-			"firstName": "Tu nombre",
-			"lastName": "Tu apellido",
-			"email": "tu@ejemplo.com",
-			"message": "Escribe tu mensaje aquí...",
-			"company": "Escribe el nombre de la empresa que representas aquí"
-		},
-		"errors": {
-			"firstName": "El nombre es obligatorio",
-			"lastName": "El apellido es obligatorio",
-			"email": "Introduce una dirección de correo válida",
-			"message": "El mensaje debe tener al menos 10 caracteres",
-			"phone": "El número de teléfono no es válido"
-		}
-	},
-	"Layout": {
-		"themeToggle": {
-			"light": "Claro",
-			"dark": "Oscuro"
-		},
-		"header": {
-			"about-us": "Sobre nosotros",
-			"contact-us": "Contáctanos"
-		}
-	},
-	"LocaleSwitcher": {
-		"label": "Seleccionar idioma",
-		"english": "Inglés",
-		"spanish": "Español"
-	},
-	"contactUs": {
-		"title": "Contáctanos",
-		"description": "Ponte en contacto con el equipo detrás de la Next Website Starter Template para preguntas, comentarios o ideas de colaboración.",
-		"keywords": "Next Website Starter Template, ShadCN, contacto, comentarios, soporte",
-		"hero": {
-			"h1": "Construyamos algo increíble juntos."
-		}
-	},
-	"Footer": {
-		"allRightsReserved": "Todos los derechos reservados."
-	}
+  "Metadata": {
+    "home": {
+      "title": "Inicio | Next Website Starter Template (ShadCN)",
+      "description": "Inicia tu proyecto en Next.js con esta plantilla lista para usar, estilizada e i18n.",
+      "ogDescription": "Crea sitios web modernos y responsivos más rápido con la plantilla Next Website Starter.",
+      "keywords": "Next Website Starter Template, ShadCN, Next.js, Tailwind CSS, i18n, plantilla"
+    },
+    "aboutUs": {
+      "title": "Sobre Nosotros | Next Website Starter Template (ShadCN)",
+      "description": "Conoce los objetivos y características de la plantilla Next Website Starter Template.",
+      "ogDescription": "Descubre cómo la plantilla Next Website Starter puede acelerar tu desarrollo web.",
+      "keywords": "Next Website Starter Template, ShadCN, Sobre Nosotros, Next.js, Tailwind CSS"
+    },
+    "contactUs": {
+      "title": "Contáctanos | Next Website Starter Template (ShadCN)",
+      "description": "Ponte en contacto con el equipo detrás de la plantilla Next Website Starter. Nos encantaría saber de ti.",
+      "ogDescription": "Haz preguntas, comparte opiniones o colabora con nosotros.",
+      "keywords": "Next Website Starter Template, ShadCN, contacto, opiniones, soporte"
+    }
+  },
+  "HomePage": {
+    "title": "Bienvenido a la plantilla Next Website Starter Template (ShadCN)",
+    "description": "Una plantilla lista para usar, con i18n, SSR y potenciada con Tailwind, que incluye componentes de ShadCN."
+  },
+  "HomePageHero": {
+    "main": "BARRAS DE PROTEÍNA MACAQUE™",
+    "subtitle": "LA MEJOR FORMA DE CONSUMIR TU WHEY",
+    "subtext": "Olvidate de los batidos tradicionales. Las BARRAS DE PROTEÍNA MACAQUE™ entregan proteína whey de calidad premium en un formato delicioso y personalizable — diseñado para tus objetivos y tu rutina.",
+    "cta": "Armá tu propia barra",
+    "cta2": "Ver más"
+  },
+  "AboutUsHero": {
+    "h1": "Acerca de Next Website Starter",
+    "h2": "Una plantilla ligera para Next.js con i18n, Tailwind y ShadCN — ideal para lanzar más rápido.",
+    "cta": "Contáctanos"
+  },
+  "ContactHero": {
+    "h1": "Ponte en contacto",
+    "h2": "¿Preguntas, comentarios o ideas? Nos encantará leerte.",
+    "cta": "Enviar mensaje"
+  },
+  "ContactPage": {
+    "hero": {
+      "h1": "Contáctanos",
+      "description": "¿Tienes una pregunta o una idea? Completa el formulario y nos pondremos en contacto contigo lo antes posible."
+    }
+  },
+  "ContactForm": {
+    "optional": "Opcional",
+    "firstName": "Nombre",
+    "firstNamePlaceholder": "Tu nombre",
+    "lastName": "Apellido",
+    "lastNamePlaceholder": "Tu apellido",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "message": "Mensaje",
+    "messagePlaceholder": "Escribe tu mensaje aquí...",
+    "phone": "Número de teléfono",
+    "phonePlaceholder": "Escribe tu número de teléfono aquí...",
+    "company": "Empresa",
+    "companyPlaceholder": "Escribe el nombre de tu empresa aquí...",
+    "sendMessage": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": {
+      "title": "¡Mensaje enviado!",
+      "description": "Gracias por contactarnos. Te responderemos pronto."
+    },
+    "placeholders": {
+      "firstName": "Tu nombre",
+      "lastName": "Tu apellido",
+      "email": "tu@ejemplo.com",
+      "message": "Escribe tu mensaje aquí...",
+      "company": "Escribe el nombre de la empresa que representas aquí"
+    },
+    "errors": {
+      "firstName": "El nombre es obligatorio",
+      "lastName": "El apellido es obligatorio",
+      "email": "Introduce una dirección de correo válida",
+      "message": "El mensaje debe tener al menos 10 caracteres",
+      "phone": "El número de teléfono no es válido"
+    }
+  },
+  "Layout": {
+    "themeToggle": {
+      "light": "Claro",
+      "dark": "Oscuro"
+    },
+    "header": {
+      "about-us": "Sobre nosotros",
+      "contact-us": "Contáctanos"
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Seleccionar idioma",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "contactUs": {
+    "title": "Contáctanos",
+    "description": "Ponte en contacto con el equipo detrás de la Next Website Starter Template para preguntas, comentarios o ideas de colaboración.",
+    "keywords": "Next Website Starter Template, ShadCN, contacto, comentarios, soporte",
+    "hero": {
+      "h1": "Construyamos algo increíble juntos."
+    }
+  },
+  "Footer": {
+    "allRightsReserved": "Todos los derechos reservados."
+  }
 }

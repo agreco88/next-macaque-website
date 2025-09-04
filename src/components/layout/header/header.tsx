@@ -10,22 +10,27 @@ import HeaderMobileToggle from "./header-mobile-toggle";
 import HeaderMobileMenu from "./header-mobile-menu";
 
 export default function Header() {
-	const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-	return (
-		<motion.header
-			className="container mx-auto flex py-6 px-4 md:px-0 justify-between"
-			variants={fadeInUp}
-			initial="show"
-			animate="show"
-			exit="hidden"
-		>
-			<HeaderLogo />
-			<HeaderNav />
-			<HeaderMobileToggle isOpen={isOpen} onToggle={() => setIsOpen(!isOpen)} />
-			<AnimatePresence>
-				{isOpen && <HeaderMobileMenu key="mobile-menu" onClose={() => setIsOpen(false)} />}
-			</AnimatePresence>
-		</motion.header>
-	);
+  return (
+    <motion.header
+      className="fixed w-full container self-center p-4 justify-between flex flex-grow z-50"
+      variants={fadeInUp}
+      initial="show"
+      animate="show"
+      exit="hidden"
+    >
+      <HeaderLogo />
+      <HeaderNav />
+      <HeaderMobileToggle isOpen={isOpen} onToggle={() => setIsOpen(!isOpen)} />
+      <AnimatePresence>
+        {isOpen && (
+          <HeaderMobileMenu
+            key="mobile-menu"
+            onClose={() => setIsOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+    </motion.header>
+  );
 }
