@@ -48,24 +48,21 @@ export default function LocaleSwitcherSelect({ defaultValue, options }: Props) {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button className="cursor-pointer" variant="ghost" disabled={isPending} asChild>
-					<span className="inline-flex items-center gap-4">
-						<Flag countryCode={currentFlagCode} className="size-10" svg />
-						{currentLabel}
+				<Button className="cursor-pointer mx-0 px-0" variant="ghost" disabled={isPending} asChild>
+					<span className="inline-flex items-center gap-2">
+						<Flag countryCode={currentFlagCode} className="size-5" svg />
+						<span className="truncate max-w-[80px] block">{currentLabel}</span>
 						<ChevronDown className="h-4 w-4 opacity-70" />
 					</span>
 				</Button>
 			</DropdownMenuTrigger>
-			<DropdownMenuContent className="min-w-(--radix-dropdown-menu-trigger-width)">
+			<DropdownMenuContent>
 				{options.map((option) => (
 					<DropdownMenuItem
 						key={option.value}
 						onClick={() => onLocaleChange(option.value)}
 						disabled={option.value === defaultValue}
-						className={`flex items-center gap-4 ${option.value !== defaultValue && "cursor-pointer"}`}
 					>
-						<Flag countryCode={option.countryCode} svg />
-
 						{option.label}
 					</DropdownMenuItem>
 				))}

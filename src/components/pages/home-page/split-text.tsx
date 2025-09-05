@@ -48,41 +48,62 @@ import { animate, stagger } from "framer-motion";
 import { splitText } from "motion-plus";
 import { useEffect, useRef } from "react";
 type SplitTextProps = {
-  text: string | React.ReactNode;
-  className?: string;
+	text: string | React.ReactNode;
+	className?: string;
 };
-export default function SplitText({
-  text = "",
-  className = "",
-}: SplitTextProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+export default function SplitText({ text = "", className = "" }: SplitTextProps) {
+	const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    document.fonts.ready.then(() => {
-      if (!containerRef.current) return;
+	// useEffect(() => {
+	//   document.fonts.ready.then(() => {
+	//     if (!containerRef.current) return;
 
-      // Hide the container until the fonts are loaded
-      containerRef.current.style.visibility = "visible";
+	//     // Hide the container until the fonts are loaded
+	//     containerRef.current.style.visibility = "visible";
 
-      const { words } = splitText(containerRef.current.querySelector("h1")!);
+	//     const { words } = splitText(containerRef.current.querySelector("h1")!);
 
-      // Animate the words in the h1
-      animate(
-        words,
-        { opacity: [0, 1], y: [10, 0] },
-        {
-          type: "spring",
-          duration: 6,
-          bounce: 0,
-          delay: stagger(0.05),
-        }
-      );
-    });
-  }, []);
+	//     // Animate the words in the h1
+	//     animate(
+	//       words,
+	//       { opacity: [0, 1], y: [10, 0] },
+	//       {
+	//         type: "spring",
+	//         duration: 6,
+	//         bounce: 0,
+	//         delay: stagger(0.05),
+	//       }
+	//     );
+	//   });
+	// }, []);
 
-  return (
-    <div className="container flex justify-center" ref={containerRef}>
-      <h1 className="h1">{text}</h1>
-    </div>
-  );
+	useEffect(() => {
+		document.fonts.ready.then(() => {
+			if (!containerRef.current) return;
+
+			containerRef.current.style.visibility = "visible";
+
+			const target = containerRef.current.querySelector("h1");
+			if (!target) return;
+
+			const { words } = splitText(target);
+
+			animate(
+				words,
+				{ opacity: [0, 1], y: [10, 0] },
+				{
+					type: "spring",
+					duration: 2,
+					bounce: 0,
+					delay: stagger(0.05),
+				}
+			);
+		});
+	}, []);
+
+	return (
+		<div ref={containerRef}>
+			<h1 className="h1">{text}</h1>
+		</div>
+	);
 }
