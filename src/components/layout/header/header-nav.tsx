@@ -37,7 +37,7 @@ export default function HeaderNav() {
                 className={cn(
                   "relative px-0 font-medium !no-underline",
                   // custom underline, closer to text
-                  "after:absolute after:bottom-[5px] after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-current after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100",
+                  "after:absolute after:bottom-[5px] after:left-0 after:h-[1px] after:w-full after:scale-x-0 after:bg-orange-400 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100",
                   isActive && "after:scale-x-100"
                 )}
               >
@@ -55,9 +55,9 @@ export default function HeaderNav() {
         <motion.li variants={waterfallItem}>
           <LocaleSwitcher />
         </motion.li>
-        {/* <motion.li variants={waterfallItem}>
-					<ThemeToggle />
-				</motion.li> */}
+        <motion.li variants={waterfallItem}>
+          <ThemeToggle />
+        </motion.li>
       </motion.ul>
     </nav>
   );

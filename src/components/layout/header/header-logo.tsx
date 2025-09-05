@@ -12,16 +12,19 @@ export default function HeaderLogo() {
   return (
     <div className="flex items-center">
       {/* Logo on medium+ screens */}
-      <Link href={`/${locale}`} className="flex items-center gap-4">
+      <Link
+        href={`/${locale}`}
+        className="hidden md:flex flex-col items-center gap-4"
+      >
         <Image
-          className=""
-          src="/macaque-isotype.png"
-          alt="Macaque Isotype"
-          width={40}
-          height={24}
+          className="opacity-80"
+          src="/images/logo/macaque-isotype-small.png"
+          alt="Ripped macaque holding doing biceps curls with 40kg"
+          width={80}
+          height={80}
           priority
-        />
-        <p className="uppercase text-xs tracking-tight font-bold">
+        />{" "}
+        <p className="sr-only uppercase text-xs tracking-tight font-bold">
           MACAQUE™ PROTEIN BARS
         </p>
       </Link>
@@ -35,13 +38,13 @@ export default function HeaderLogo() {
         )}
       >
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={50}
-          height={11}
+          className="opacity-80"
+          src="/images/logo/macaque-isotype-small.png"
+          alt="Ripped macaque holding doing biceps curls with 40kg"
+          width={40}
+          height={40}
           priority
-        />
+        />{" "}
       </Link>
     </div>
   );

@@ -1,26 +1,26 @@
 {
   "Metadata": {
     "home": {
-      "title": "Inicio | Next Website Starter Template (ShadCN)",
-      "description": "Inicia tu proyecto en Next.js con esta plantilla lista para usar, estilizada e i18n.",
-      "ogDescription": "Crea sitios web modernos y responsivos más rápido con la plantilla Next Website Starter.",
-      "keywords": "Next Website Starter Template, ShadCN, Next.js, Tailwind CSS, i18n, plantilla"
+      "title": "Inicio | MACAQUE™ PROTEIN BARS",
+      "description": "Energizá tu día con MACAQUE™ Protein Bars — creadas para brindar energía, sabor y rendimiento.",
+      "ogDescription": "Descubrí MACAQUE™ Protein Bars: snacks altos en proteína diseñados para potenciar tu estilo de vida.",
+      "keywords": "Macaque Protein Bars, snacks saludables, barras proteicas, energía, nutrición, fitness"
     },
     "aboutUs": {
-      "title": "Sobre Nosotros | Next Website Starter Template (ShadCN)",
-      "description": "Conoce los objetivos y características de la plantilla Next Website Starter Template.",
-      "ogDescription": "Descubre cómo la plantilla Next Website Starter puede acelerar tu desarrollo web.",
-      "keywords": "Next Website Starter Template, ShadCN, Sobre Nosotros, Next.js, Tailwind CSS"
+      "title": "Sobre Nosotros | MACAQUE™ PROTEIN BARS",
+      "description": "Conocé nuestra misión de crear barras proteicas que combinan nutrición, sabor y sustentabilidad.",
+      "ogDescription": "En MACAQUE™ creemos en potenciar tu rendimiento con ingredientes saludables y sostenibles.",
+      "keywords": "Macaque Protein Bars, nuestra historia, vida saludable, nutrición, sustentabilidad"
     },
     "contactUs": {
-      "title": "Contáctanos | Next Website Starter Template (ShadCN)",
-      "description": "Ponte en contacto con el equipo detrás de la plantilla Next Website Starter. Nos encantaría saber de ti.",
-      "ogDescription": "Haz preguntas, comparte opiniones o colabora con nosotros.",
-      "keywords": "Next Website Starter Template, ShadCN, contacto, opiniones, soporte"
+      "title": "Contacto | MACAQUE™ PROTEIN BARS",
+      "description": "Ponete en contacto con MACAQUE™ — queremos escuchar tus comentarios y responder tus preguntas.",
+      "ogDescription": "Contactá a MACAQUE™ Protein Bars para consultas, colaboraciones o soporte.",
+      "keywords": "Macaque Protein Bars, contacto, atención al cliente, consultas, feedback"
     }
   },
   "HomePage": {
-    "title": "Bienvenido a la plantilla Next Website Starter Template (ShadCN)",
+    "title": "Bienvenido a la plantilla BARRAS DE PROTEÍNA MACAQUE",
     "description": "Una plantilla lista para usar, con i18n, SSR y potenciada con Tailwind, que incluye componentes de ShadCN."
   },
   "HomePageHero": {

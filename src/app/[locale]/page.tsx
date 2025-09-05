@@ -11,11 +11,12 @@ export async function generateMetadata({
   return await generateLocaleMetadata({
     locale,
     route: "home",
+    path: "/",
     image: {
-      url: "https://yourdomain.com/images/og-home.jpg",
+      url: "/macaque-isotype.webp", // <-- just reference from /public
       width: 1200,
       height: 630,
-      alt: "Website Template hero",
+      alt: "MACAQUE™ Protein Bars",
     },
   });
 }
