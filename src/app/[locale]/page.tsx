@@ -1,4 +1,5 @@
 import HomePageHero from "@/components/pages/home-page/home-page-hero";
+import WhyMacaque from "@/components/pages/home-page/why-macaque";
 import { generateLocaleMetadata } from "@/lib/generate-locale-metadata";
 import { Metadata } from "next";
 
@@ -21,6 +22,7 @@ export default function HomePage() {
 	return (
 		<main className="">
 			<HomePageHero />
+			<WhyMacaque />
 		</main>
 	);
 }
