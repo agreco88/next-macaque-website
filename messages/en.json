@@ -20,6 +20,11 @@
     }
   },
 
+  "AnimatedStatsGrid": {
+    "title": "Welcome to the MACAQUE™ PROTEIN BARS",
+    "description": "A ready-to-use, i18n-enabled, SSR, and Tailwind-powered starter template with ShadCN components."
+  },
+
   "HomePage": {
     "title": "Welcome to the MACAQUE™ PROTEIN BARS",
     "description": "A ready-to-use, i18n-enabled, SSR, and Tailwind-powered starter template with ShadCN components."
