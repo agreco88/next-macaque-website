@@ -1,7 +1,7 @@
 // components/VideoBackground.tsx
 export default function VideoBackground({ isMobile }: { isMobile: boolean }) {
 	return (
-		<div className="absolute inset-0 z-0 top-1/2 sm:top-0 left-0 bottom-0">
+		<div className="absolute inset-0 z-0 top-2/3 sm:top-0 left-0 bottom-0">
 			{isMobile ? (
 				<video
 					className="w-full h-full opacity-40 object-cover"

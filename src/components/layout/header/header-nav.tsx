@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/data/nav-links";
 import LocaleSwitcher from "@/components/locale-switcher/locale-switcher";
-import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { waterfallList, waterfallItem } from "@/lib/animation-variants";
 import { cn } from "@/lib/utils";
 
@@ -51,9 +50,9 @@ export default function HeaderNav() {
 				<motion.li variants={waterfallItem}>
 					<LocaleSwitcher />
 				</motion.li>
-				<motion.li variants={waterfallItem}>
+				{/* <motion.li variants={waterfallItem}>
 					<ThemeToggle />
-				</motion.li>
+				</motion.li> */}
 			</motion.ul>
 		</nav>
 	);
