@@ -1,78 +1,107 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { AnimateNumber } from "motion-plus/react";
-import { Eye } from "lucide-react";
-import Image from "next/image";
+import { GridCardCorners } from "./grid-card-corners";
+import { CircleDollarSign } from "lucide-react";
+import { motion, useInView, useReducedMotion } from "framer-motion";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export const GridCardPricing = () => {
-  const [hovered, setHovered] = useState(false);
+	const [hovered, setHovered] = useState(false);
+	const t = useTranslations("AnimatedStatsGrid.cards.pricing");
 
-  return (
-    <a
-      href="#"
-      target="_blank"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="group relative flex h-56 flex-col justify-end overflow-hidden p-6 transition-colors hover:bg-neutral-950 md:h-80 md:p-9"
-    >
-      {/* Top Title */}
-      <h2 className="relative z-10 text-xl uppercase tracking-wide text-neutral-400 group-hover:text-orange-400 transition-colors duration-500">
-        PRICE
-      </h2>
+	// Desktop vs mobile logic
+	const isDesktopWidth = useMediaQuery("(min-width: 1024px)");
+	const isHoverCapable = useMediaQuery("(hover: hover) and (pointer: fine)");
+	const isDesktop = isDesktopWidth && isHoverCapable;
 
-      {/* AnimateNumber */}
-      <span className="text-6xl font-medium text-gray-50 leading-none">
-        <AnimateNumber
-          format={{
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
-          }}
-          locales="en-US"
-          className="number"
-          transition={{
-            visualDuration: 0.6,
-            type: "spring",
-            bounce: 0.25,
-            opacity: { duration: 0.2, ease: "linear" },
-          }}
-        >
-          {hovered ? 2999 : 166}
-        </AnimateNumber>
-      </span>
-      <p className="relative z-10 mt-2 max-w-prose text-sm text-neutral-400 transition-all duration-500 group-hover:text-neutral-300  line-clamp-2">
-        Per {hovered ? "month" : "day"}
-      </p>
+	// In-view trigger for mobile/tablet
+	const ref = useRef<HTMLAnchorElement>(null);
+	const inView = useInView(ref, {
+		amount: 0.65, // require ~65% visible
+		margin: "-35% 0% -35% 0%", // center band
+		once: false, // re-activate on re-entry
+	});
 
-      {/* Icon */}
-      <Eye className="absolute right-3 top-4 z-10 text-2xl text-neutral-400 transition-colors group-hover:text-neutral-50" />
+	const reduce = useReducedMotion();
+	const active = isDesktop ? hovered : inView;
 
-      {/* Image Background */}
-      <div
-        className="absolute bottom-0 left-0 right-0 top-0  opacity-0 transition-opacity duration-500 group-hover:opacity-20"
-        style={{
-          backgroundImage: `url(/images/animated-card-grid/image-card-pricing.webp)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
+	return (
+		<motion.a
+			ref={ref}
+			href="#"
+			target="_blank"
+			rel="noreferrer noopener"
+			onMouseEnter={() => setHovered(true)}
+			onMouseLeave={() => setHovered(false)}
+			className="group relative flex h-56 flex-col justify-between overflow-hidden p-4 sm:p-8 px-4 md:h-80"
+			initial={false}
+		>
+			{/* Top row: Title + Icon */}
+			<div className="flex w-full items-center justify-between">
+				<div
+					className={`flex items-center gap-1.5 text-xs uppercase transition-colors duration-500 ${
+						active ? "text-orange-400" : "text-neutral-600"
+					}`}
+				>
+					{t("title")}
+				</div>
 
-      <Corners />
-    </a>
-  );
+				<div
+					className={`flex items-center gap-1.5 text-xs uppercase transition-colors duration-500 ${
+						active ? "text-orange-400" : "text-neutral-600"
+					}`}
+				>
+					<CircleDollarSign />
+				</div>
+			</div>
+
+			{/* Copy + price */}
+			<div className="flex flex-col">
+				<p
+					className={`relative z-10  transition-colors duration-500 ${
+						active ? "text-neutral-300" : "text-neutral-600"
+					}`}
+				>
+					{t("labelFrom")}
+				</p>
+
+				<span
+					className={`flex items-center gap-2 text-4xl sm:text-5xl font-semibold leading-none ${
+						active ? "text-orange-400" : "text-gray-300"
+					}`}
+				>
+					{/* Manual currency symbol to force $U */}
+					<span>$U</span>
+
+					<AnimateNumber
+						suffix={active ? t("suffix.month") : t("suffix.day")}
+						className="number"
+						transition={{
+							visualDuration: 0.6,
+							type: "spring",
+							bounce: 0.25,
+							opacity: { duration: 0.2, ease: "linear" },
+						}}
+					>
+						{active ? 2999 : 166}
+					</AnimateNumber>
+				</span>
+			</div>
+
+			<GridCardCorners />
+
+			{/* Background (fades with `active`) */}
+			<motion.img
+				src="/images/animated-card-grid/image-card-pricing.webp"
+				alt="Pricing background"
+				className="absolute inset-0 h-full w-full object-cover"
+				initial={false}
+				animate={{ opacity: active ? 0.2 : 0 }}
+				transition={{ duration: reduce ? 0 : 0.5, ease: "easeOut" }}
+			/>
+		</motion.a>
+	);
 };
-
-const Corners = () => (
-  <>
-    <span className="absolute left-[1px] top-[1px] z-10 h-3 w-[1px] origin-top scale-0 bg-orange-400 transition-all duration-500 group-hover:scale-100" />
-    <span className="absolute left-[1px] top-[1px] z-10 h-[1px] w-3 origin-left scale-0 bg-orange-400 transition-all duration-500 group-hover:scale-100" />
-    <span className="absolute bottom-[1px] right-[1px] z-10 h-3 w-[1px] origin-bottom scale-0 bg-orange-400 transition-all duration-500 group-hover:scale-100" />
-    <span className="absolute bottom-[1px] right-[1px] z-10 h-[1px] w-3 origin-right scale-0 bg-orange-400 transition-all duration-500 group-hover:scale-100" />
-    <span className="absolute bottom-[1px] left-[1px] z-10 h-3 w-[1px] origin-bottom scale-0 bg-orange-400 transition-all duration-500 group-hover:scale-100" />
-    <span className="absolute bottom-[1px] left-[1px] z-10 h-[1px] w-3 origin-left scale-0 bg-orange-400 transition-all duration-500 group-hover:scale-100" />
-    <span className="absolute right-[1px] top-[1px] z-10 h-3 w-[1px] origin-top scale-0 bg-orange-400 transition-all duration-500 group-hover:scale-100" />
-    <span className="absolute right-[1px] top-[1px] z-10 h-[1px] w-3 origin-right scale-0 bg-orange-400 transition-all duration-500 group-hover:scale-100" />
-  </>
-);
