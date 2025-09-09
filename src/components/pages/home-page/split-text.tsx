@@ -7,7 +7,7 @@ type SplitTextProps = {
 	text: string | React.ReactNode;
 	className?: string;
 };
-export default function SplitText({ text = "", className = "" }: SplitTextProps) {
+export default function SplitText({ text = "" }: SplitTextProps) {
 	const containerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {

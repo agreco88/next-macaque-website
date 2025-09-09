@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 // components/VideoBackground.tsx
 export default function VideoBackground({ isMobile }: { isMobile: boolean }) {
 	return (

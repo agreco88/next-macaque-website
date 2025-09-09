@@ -2,14 +2,13 @@
 
 import React from "react";
 import { useTranslations, useMessages } from "next-intl";
-import { Apple, ArrowUpRight, BatteryFull, CandyIcon, ChevronDown, PackageCheck, WandSparkles } from "lucide-react";
+import { Apple, BatteryFull, CandyIcon, PackageCheck, WandSparkles } from "lucide-react";
 import { GridCardPricing } from "../stats-grid-cards/grid-card-pricing";
 import { GridCardProtein } from "../stats-grid-cards/grid-card-protein";
 import { GridCard } from "../stats-grid-cards/grid-card";
 
 export const AnimatedStatsGrid = () => {
 	const t = useTranslations("AnimatedStatsGrid");
-	const messages = useMessages() as any;
 
 	return (
 		<div className="bg-neutral-900 min-h-screen text-neutral-50 md:p-12">

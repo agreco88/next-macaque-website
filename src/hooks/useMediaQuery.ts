@@ -10,10 +10,9 @@ export function useMediaQuery(query: string) {
 
 		setMatches(mql.matches);
 		// addEventListener fallback for Safari
-		// @ts-ignore
+
 		mql.addEventListener ? mql.addEventListener("change", onChange) : mql.addListener(onChange);
 		return () => {
-			// @ts-ignore
 			mql.removeEventListener ? mql.removeEventListener("change", onChange) : mql.removeListener(onChange);
 		};
 	}, [query]);
