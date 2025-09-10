@@ -33,7 +33,7 @@ export function StatsGridWrapper({
       ? `border-y md:border border-neutral-700 `
       : variant === "middle"
       ? `md:border-x border-neutral-700 `
-      : `border border-neutral-700 `);
+      : `border-y border-x-0 md:border-x border-neutral-700 `);
 
   return (
     <div className={`${base}${className ? " " + className : ""}`}>
