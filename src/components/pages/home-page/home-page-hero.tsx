@@ -24,20 +24,20 @@ export default function HomePageHero() {
     <section className="relative min-h-dvh flex bg-black text-white overflow-hidden pt-16">
       <VideoBackground isMobile={isMobile} />
 
-      <div className="relative mx-auto z-10 w-full px-4 sm:px-8 xl:px-0 flex justify-center sm:justify-start">
+      <div className="relative mx-auto xl:container z-10 w-full px-4 sm:px-8 xl:px-0 flex justify-center sm:justify-start">
         <div className="sm:max-w-2xl flex flex-col gap-4 sm:gap-6 items-center sm:items-start w-full md:justify-center justify-around text-left pt-safe sm:pt-24">
           <div className="flex flex-col gap-8 justify-between sm:justify-center text-center sm:text-start h-full sm:h-auto">
-            <div className="flex flex-col gap-2 max-w-xl items-center sm:items-start">
+            <div className="flex flex-col gap-4 max-w-xl items-center sm:items-start">
               <span className="text-sm sm:text-xl text-gray-200 flex gap-2 uppercase tracking-wide">
                 {isMounted && <SplitText text={hero("main")} />}
               </span>
 
-              <h1 className="text-2xl sm:text-4xl text-center sm:text-start font-bold uppercase md:text-white md:border-l-[1px] border-orange-400 md:pl-3 leading-tight">
+              <h1 className="text-3xl sm:text-4xl text-center sm:text-start font-bold uppercase md:text-white md:border-l-[1px] border-orange-400 md:pl-3 leading-tight">
                 {isMounted && <SplitText text={hero("subtitle")} />}
               </h1>
             </div>
 
-            <p className="text-gray-300 text-sm max-w-sm sm:text-base">
+            <p className="text-gray-300 text-sm max-w-sm md:max-w-prose sm:text-base">
               <span className="sm:hidden">
                 <SplitText text={hero("subtext_mobile")} />
               </span>
