@@ -4,7 +4,7 @@ export default function VideoBackground({ isMobile }: { isMobile: boolean }) {
 		<div className="absolute inset-0 z-0 top-0 left-0 bottom-0">
 			{isMobile ? (
 				<video
-					className="w-full h-full opacity-80 object-cover"
+					className="w-full h-full opacity-70 object-cover"
 					autoPlay
 					muted
 					loop
@@ -33,10 +33,10 @@ export default function VideoBackground({ isMobile }: { isMobile: boolean }) {
           bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_100%,rgba(0,0,0,0)_100%)]
 
           /* Medium screens: vignette spread wider, edges softer */
-          md:bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_40%,rgba(0,0,0,0.6)_90%)]
+          md:bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_40%,rgba(0,0,0,0.8)_90%)]
 
           /* 2XL screens: very subtle, wide fade */
-          2xl:bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_45%,rgba(0,0,0,0.4)_100%)]
+          2xl:bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_45%,rgba(0,0,0,1.2)_100%)]
         "
 			/>
 		</div>
