@@ -32,18 +32,24 @@ export function StatsGridBanner({
         className
       }
     >
-      <h2 className="text-4xl  leading-tight">
+      <h2
+        className={` text-4xl leading-tight ${
+          variant === "headline"
+            ? " transition-colors duration-500  "
+            : "text-neutral-50 flex flex-col h-full  justify-around "
+        }`}
+      >
         <span
           className={
             variant === "headline"
               ? "text-orange-400 transition-colors duration-500  "
-              : "text-neutral-400 transition-colors duration-500 group-hover:text-orange-400"
+              : ""
           }
         >
           {topLine}
         </span>
         <br />
-        {bottomLine}
+        <span className="text-orange-400">{bottomLine}</span>
       </h2>
     </div>
   );
@@ -53,7 +59,7 @@ export function StatsGridBanner({
     <a
       href={href}
       target="_blank"
-      className="block focus:outline-none focus:ring-2 focus:ring-orange-400/60"
+      className="block focus:outline-none focus:ring-2 focus:ring-orange-400/60 border-orange-500 border text-neutral-950"
     >
       {content}
     </a>

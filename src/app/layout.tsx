@@ -7,28 +7,32 @@ import "./globals.css";
 
 // Load the font
 const jakarta = Plus_Jakarta_Sans({
-	subsets: ["latin"],
-	variable: "--font-jakarta", // Optional, useful for Tailwind
-	weight: ["200", "300", "400", "500", "600", "700"], // Include only what you need
+  subsets: ["latin"],
+  variable: "--font-jakarta", // Optional, useful for Tailwind
+  weight: ["200", "300", "400", "500", "600", "700"], // Include only what you need
 });
 
 export const metadata: Metadata = {
-	title: "Next.js Website Template",
-	description: "Next.js Website Template used for default landing pages",
+  title: "Next.js Website Template",
+  description: "Next.js Website Template used for default landing pages",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en" suppressHydrationWarning className={jakarta.variable}>
-			<body className="transition-all min-w-dvw dark">
-				{/* <ThemeClientWrapper> */}
-				{children} <ToasterProvider />
-				{/* </ThemeClientWrapper> */}
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en" suppressHydrationWarning className={jakarta.variable}>
+      <body className="transition-all min-w-dvw dark">
+        {/* <ThemeClientWrapper> */}
+        {children} <ToasterProvider />
+        {/* </ThemeClientWrapper> */}
+      </body>
+    </html>
+  );
 }
