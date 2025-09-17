@@ -22,7 +22,7 @@ export const AnimatedStatsGrid = async () => {
   return (
     <section
       id="whymacaque"
-      className="bg-neutral-900 min-h-screen w-full text-neutral-50 content-center lg:py-12"
+      className="bg-gradient-to-t from-neutral-950 via-neutral-950 to-neutral-900 min-h-screen w-full text-neutral-50 content-center lg:py-12"
     >
       {/* <StatsGridTitle
         kicker={t("kicker")}

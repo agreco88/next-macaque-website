@@ -1,4 +1,5 @@
 import HomePageHero from "@/components/pages/home-page/home-page-hero";
+import PricingSection from "@/components/pages/home-page/pricing-section";
 import { AnimatedStatsGrid } from "@/components/stats-grid/animated-stats-grid";
 import { generateLocaleMetadata } from "@/lib/generate-locale-metadata";
 import { Metadata } from "next";
@@ -27,6 +28,7 @@ export default function HomePage() {
     <main className="">
       <HomePageHero />
       <AnimatedStatsGrid />
+      <PricingSection />
     </main>
   );
 }
