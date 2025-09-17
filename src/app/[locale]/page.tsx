@@ -15,21 +15,15 @@ export async function generateMetadata({
     locale,
     route: "home",
     path: "/",
-    image: {
-      url: "/macaque-isotype.webp", // <-- just reference from /public
-      width: 1200,
-      height: 630,
-      alt: "MACAQUE™ Protein Bars",
-    },
   });
 }
 
 export default function HomePage() {
   return (
-    <main className="">
+    <>
       <HomePageHero />
       <AnimatedStatsGrid />
       <PricingSection />
-    </main>
+    </>
   );
 }

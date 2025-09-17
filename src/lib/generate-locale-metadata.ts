@@ -1,8 +1,9 @@
 // /lib/generate-locale-metadata.ts
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
+import { routing } from "@/i18n/routing";
 
-const BASE_URL = "https://macaque.bar"; // <-- set your real domain
+const BASE_URL = "https://www.macaque.com.uy";
 const SITE_NAME = "MACAQUE™ Protein Bars";
 
 type OgImage = {
@@ -13,7 +14,7 @@ type OgImage = {
 };
 
 const DEFAULT_OG_IMAGE: OgImage = {
-  url: `${BASE_URL}/images/og/macaque-default.jpg`, // <-- your default
+  url: `${BASE_URL}/images/og/macaque-isotype.png`,
   width: 1200,
   height: 630,
   alt: "MACAQUE™ Protein Bars",
@@ -21,15 +22,15 @@ const DEFAULT_OG_IMAGE: OgImage = {
 
 type GenerateLocaleMetadataOptions = {
   locale: string;
-  route: string; // translation key like "home", "aboutUs", etc.
-  path?: string; // optional: the URL path (e.g. "/", "/about-us")
-  image?: Partial<OgImage>; // allow overriding just url or alt, etc.
+  route: string; // key like "home", "aboutUs"
+  path?: string; // optional: URL path like "/", "/about-us"
+  image?: Partial<OgImage>; // override OG image
 };
 
 export async function generateLocaleMetadata({
   locale,
   route,
-  path = "/", // sensible default
+  path = "/",
   image,
 }: GenerateLocaleMetadataOptions): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Metadata" });
@@ -40,27 +41,43 @@ export async function generateLocaleMetadata({
   const rawKeywords = t(`${route}.keywords`);
   const keywords = rawKeywords.split(",").map((k) => k.trim());
 
-  // Merge defaults with any per-page overrides
   const finalImage: OgImage = { ...DEFAULT_OG_IMAGE, ...image };
 
+  // normalize to no trailing slash
+  const fullUrl = `${BASE_URL}/${locale}${path}`.replace(/\/+$/, "");
+
   return {
+    metadataBase: new URL(BASE_URL),
     title,
     description,
     keywords,
     openGraph: {
       title,
       description: ogDescription,
-      url: `${BASE_URL}/${locale}${path}`,
+      url: fullUrl,
       siteName: SITE_NAME,
-      images: [finalImage],
       locale: locale === "es" ? "es_ES" : "en_US",
       type: "website",
+      images: [finalImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: ogDescription,
       images: [finalImage.url],
+    },
+    alternates: {
+      canonical: fullUrl,
+      languages: Object.fromEntries(
+        routing.locales.map((l) => [
+          l,
+          `${BASE_URL}/${l}${path}`.replace(/\/+$/, ""),
+        ])
+      ),
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
     icons: {
       icon: "/favicon.ico",

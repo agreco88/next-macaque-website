@@ -1,7 +1,6 @@
-import ContactForm from "@/components/pages/contact/contact-form";
-import ContactHero from "@/components/pages/contact/contact-hero";
 import { generateLocaleMetadata } from "@/lib/generate-locale-metadata";
 import { Metadata } from "next";
+import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
   params,
@@ -12,16 +11,17 @@ export async function generateMetadata({
 
   return await generateLocaleMetadata({
     locale,
-    route: "contactUs",
-    path: "/contact-us",
+    route: "pricingPage",
+    path: "/pricing",
   });
 }
 
-export default function ContactUsPage() {
+export default function PricingPage() {
+  const t = useTranslations("PricingPage");
+
   return (
     <>
-      <ContactHero />
-      <ContactForm />
+      <h1>{t("hero.h1")}</h1>
     </>
   );
 }

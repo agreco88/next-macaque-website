@@ -17,6 +17,18 @@
       "description": "Get in touch with MACAQUE™ — we’d love to hear your feedback or answer your questions.",
       "ogDescription": "Reach out to MACAQUE™ Protein Bars for inquiries, collaborations, or support.",
       "keywords": "Macaque Protein Bars, contact, customer support, inquiries, feedback"
+    },
+    "buildYourBar": {
+      "title": "Build Your Bar | MACAQUE™ PROTEIN BARS",
+      "description": "Customize your own MACAQUE™ Protein Bar — choose your flavor, texture, and extras.",
+      "ogDescription": "Personalize your protein experience with MACAQUE™ Build Your Bar.",
+      "keywords": "Macaque Protein Bars, build your bar, customize, protein, fitness, nutrition"
+    },
+    "pricingPage": {
+      "title": "Pricing | MACAQUE™ PROTEIN BARS",
+      "description": "Explore MACAQUE™ Protein Bars pricing and plans — flexible options for every lifestyle.",
+      "ogDescription": "Choose the MACAQUE™ Protein Bars plan that fits your goals and budget.",
+      "keywords": "Macaque Protein Bars, pricing, plans, subscription, cost, nutrition, fitness"
     }
   },
 
@@ -46,6 +58,18 @@
     "hero": {
       "h1": "Contact us",
       "description": "Have a question or idea? Fill out the form and we’ll get back to you as soon as possible."
+    }
+  },
+  "BuildYourBarPage": {
+    "hero": {
+      "h1": "Build your bar",
+      "description": "TODO DESCR IN EN"
+    }
+  },
+  "PricingPage": {
+    "hero": {
+      "h1": "Precios para todas las necesidades",
+      "description": "La nutrición que se adapta a tu presupuesto, no al revés"
     }
   },
   "ContactForm": {
@@ -90,7 +114,9 @@
     },
     "header": {
       "about-us": "About us",
-      "contact-us": "Contact us"
+      "contact-us": "Contact us",
+      "build-your-bar": "Build your bar",
+      "pricing": "Pricing"
     }
   },
   "LocaleSwitcher": {
