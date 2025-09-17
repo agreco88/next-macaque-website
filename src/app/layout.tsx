@@ -24,10 +24,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning className={jakarta.variable}>
-			<body className="transition-all min-w-dvw">
-				<ThemeClientWrapper>
-					{children} <ToasterProvider />
-				</ThemeClientWrapper>
+			<body className="transition-all min-w-dvw dark">
+				{/* <ThemeClientWrapper> */}
+				{children} <ToasterProvider />
+				{/* </ThemeClientWrapper> */}
 			</body>
 		</html>
 	);

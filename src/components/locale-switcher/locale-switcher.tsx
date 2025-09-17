@@ -28,8 +28,6 @@ const localeOptionsMap: Record<
 > = {
 	en: { labelKey: "english", countryCode: "US" }, // 🇺🇸
 	es: { labelKey: "spanish", countryCode: "ES" }, // 🇪🇸
-	pt: { labelKey: "portuguese", countryCode: "PT" }, // 🇵🇹
-	de: { labelKey: "german", countryCode: "DE" }, // 🇵🇹
 };
 
 export default function LocaleSwitcher() {

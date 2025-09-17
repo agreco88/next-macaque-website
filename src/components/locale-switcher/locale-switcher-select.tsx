@@ -60,9 +60,16 @@ export default function LocaleSwitcherSelect({ defaultValue, options }: Props) {
 				{options.map((option) => (
 					<DropdownMenuItem
 						key={option.value}
+						className={`${
+							option.value === defaultValue
+								? " text-gray-500 cursor-default  "
+								: " text-gray-50 cursor-pointer"
+						}`}
 						onClick={() => onLocaleChange(option.value)}
 						disabled={option.value === defaultValue}
 					>
+						{" "}
+						<Flag countryCode={option.countryCode} className="size-5" svg />
 						{option.label}
 					</DropdownMenuItem>
 				))}
