@@ -76,8 +76,8 @@ export async function generateLocaleMetadata({
       ),
     },
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
     },
     icons: {
       icon: "/favicon.ico",
