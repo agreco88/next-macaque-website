@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={jakarta.variable}>
+    <html suppressHydrationWarning className={jakarta.variable}>
       <body className="transition-all min-w-dvw dark">
         {/* <ThemeClientWrapper> */}
         {children} <ToasterProvider />
