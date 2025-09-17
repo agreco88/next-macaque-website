@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeClientWrapper } from "@/components/theme/theme-client-wrapper";
 import ToasterProvider from "@/components/providers/toaster-provider";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
@@ -27,11 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning className={jakarta.variable}>
+    <html lang="en" suppressHydrationWarning className={jakarta.variable}>
       <body className="transition-all min-w-dvw dark">
-        {/* <ThemeClientWrapper> */}
         {children} <ToasterProvider />
-        {/* </ThemeClientWrapper> */}
       </body>
     </html>
   );

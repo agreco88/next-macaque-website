@@ -9,23 +9,27 @@ import { routing } from "@/i18n/routing";
 import "../globals.css";
 
 export default async function LocaleLayout({
-	children,
-	params,
+  children,
+  params,
 }: {
-	children: React.ReactNode;
-	params: Promise<{ locale: string }>;
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
-	const { locale } = await params;
+  const { locale } = await params;
 
-	// Validate locale
-	if (!hasLocale(routing.locales, locale)) notFound();
+  // Validate locale
+  if (!hasLocale(routing.locales, locale)) notFound();
 
-	// Load messages for current locale
-	const messages = await getMessages({ locale });
+  // Load messages for current locale
+  const messages = await getMessages({ locale });
 
-	return (
-		<NextIntlClientProvider locale={locale} messages={messages}>
-			<Layout>{children}</Layout>
-		</NextIntlClientProvider>
-	);
+  return (
+    <html lang={locale}>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Layout>{children}</Layout>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
 }
