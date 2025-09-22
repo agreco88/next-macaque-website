@@ -13,11 +13,13 @@ import { StatsGridBanner } from "./stats-grid-banner"; // server-component
 import { GridCard } from "../stats-grid-cards/grid-card"; // client-component
 import { GridCardPricing } from "../stats-grid-cards/grid-card-pricing"; // client-component
 import { GridCardProtein } from "../stats-grid-cards/grid-card-protein"; // client-component
+import { LastCard } from "../stats-grid-cards/grid-last-card";
+import { FirstCard } from "../stats-grid-cards/grid-first-card";
 
-export const AnimatedStatsGrid = async () => {
-  const t = await getTranslations("AnimatedStatsGrid");
-  const tFirstCard = await getTranslations("AnimatedStatsGrid.firstCard");
-  const tLastCardCTA = await getTranslations("AnimatedStatsGrid.cta");
+export const StatsGrid = async () => {
+  const t = await getTranslations("StatsGrid");
+  const tFirstCard = await getTranslations("StatsGrid.firstCard");
+  const tLastCardCTA = await getTranslations("StatsGrid.cta");
 
   return (
     <section
@@ -32,11 +34,7 @@ export const AnimatedStatsGrid = async () => {
 
       {/* 1) header row */}
       <StatsGridWrapper variant="first">
-        <StatsGridBanner
-          variant="headline"
-          topLine={tFirstCard("whyPickTop")}
-          bottomLine={tFirstCard("whyPickBottom")}
-        />
+        <FirstCard />
         <GridCardPricing />
         <GridCardProtein />
       </StatsGridWrapper>
@@ -93,12 +91,7 @@ export const AnimatedStatsGrid = async () => {
           icon={<Apple />}
           src="/images/animated-card-grid/image-card-nutrition.webp"
         />
-        <StatsGridBanner
-          variant="cta"
-          topLine={tLastCardCTA("ready")}
-          bottomLine={tLastCardCTA("order")}
-          href="#"
-        />
+        <LastCard />
       </StatsGridWrapper>
     </section>
   );

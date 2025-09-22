@@ -137,3 +137,35 @@ export const waterfallItem: Variants = {
     transition: { duration: TIMING.item * 0.8, ease: EASING },
   },
 };
+
+export const blurredWaterfallList: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+/** Each child item in the waterfall */
+export const blurredWaterfallItem: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 10,
+    filter: "blur(5px)",
+    maskImage:
+      "linear-gradient(to right, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)",
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    maskImage:
+      "linear-gradient(to right, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%)",
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};

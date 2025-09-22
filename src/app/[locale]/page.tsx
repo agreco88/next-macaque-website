@@ -1,6 +1,8 @@
+import { FaqSection } from "@/components/pages/home-page/faq-section/faq-section";
 import HomePageHero from "@/components/pages/home-page/home-page-hero";
-import PricingSection from "@/components/pages/home-page/pricing-section";
-import { AnimatedStatsGrid } from "@/components/stats-grid/animated-stats-grid";
+import PricingSection from "@/components/pages/home-page/pricing-section/pricing-section";
+import TestimonialsSection from "@/components/pages/home-page/testimonials-section/testimonials-section";
+import { StatsGrid } from "@/components/stats-grid/stats-grid";
 import { generateLocaleMetadata } from "@/lib/generate-locale-metadata";
 import { Metadata } from "next";
 
@@ -22,8 +24,10 @@ export default function HomePage() {
   return (
     <>
       <HomePageHero />
-      <AnimatedStatsGrid />
+      <StatsGrid />
       <PricingSection />
+      <FaqSection />
+      <TestimonialsSection />
     </>
   );
 }
