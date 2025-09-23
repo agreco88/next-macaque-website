@@ -21,7 +21,7 @@ export default function PricingSection() {
         alt="Athlete stretching"
         fill
         priority
-        className="object-cover object-center opacity-20 -z-10"
+        className="object-cover object-center opacity-40 -z-10"
       />
 
       {/* Gradient Overlay */}

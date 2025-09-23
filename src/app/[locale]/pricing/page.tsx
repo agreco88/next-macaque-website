@@ -1,6 +1,7 @@
 import { generateLocaleMetadata } from "@/lib/generate-locale-metadata";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { PricingHero } from "@/components/pages/pricing/pricing-hero";
+import PricingFeatures from "@/components/pages/pricing/pricing-features";
 
 export async function generateMetadata({
   params,
@@ -17,11 +18,14 @@ export async function generateMetadata({
 }
 
 export default function PricingPage() {
-  const t = useTranslations("PricingPage");
-
   return (
-    <>
-      <h1>{t("hero.h1")}</h1>
-    </>
+    <form className="group/tiers isolate overflow-hidden bg-neutral-950 mt-32">
+      <div className="flow-root  pt-24 pb-16 sm:pt-32 lg:pb-0">
+        <PricingHero />
+      </div>
+      <div className="relative bg-neutral-950 border-t border-orange-400 lg:pt-14">
+        <PricingFeatures />
+      </div>
+    </form>
   );
 }

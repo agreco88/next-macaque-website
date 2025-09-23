@@ -5,12 +5,20 @@ import {
   blurredWaterfallList,
   blurredWaterfallItem,
 } from "@/lib/animation-variants";
+import Image from "next/image";
 
 export default function TestimonialsSection() {
   return (
-    <div className="overflow-hidden bg-neutral-950 pb-32">
+    <div className="overflow-hidden bg-neutral-950 py-16 relative">
+      <Image
+        src="/images/homepage-background-orange.png"
+        fill
+        priority
+        alt="dotted background"
+        className="opacity-40 mt-32 object-contain z-10"
+      />
       <div className="mx-auto w-full max-w-7xl px-6 lg:flex lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:min-w-full lg:flex-none lg:gap-y-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:min-w-full lg:flex-none z-50 lg:gap-y-8">
           {/* LEFT SIDE: Content */}
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
             <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
@@ -42,12 +50,12 @@ export default function TestimonialsSection() {
             variants={blurredWaterfallList}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             <motion.div
               variants={blurredWaterfallItem}
-              className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end"
+              className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none z-50 lg:self-end"
             >
               <video
                 className="aspect-7/5 w-148 max-w-none rounded-2xl bg-gray-800 object-cover max-sm:w-120"
@@ -75,7 +83,7 @@ export default function TestimonialsSection() {
 
               <motion.div
                 variants={blurredWaterfallItem}
-                className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none"
+                className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none z-50"
               >
                 <img
                   alt=""
@@ -86,7 +94,7 @@ export default function TestimonialsSection() {
 
               <motion.div
                 variants={blurredWaterfallItem}
-                className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none"
+                className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none z-50"
               >
                 <img
                   alt=""

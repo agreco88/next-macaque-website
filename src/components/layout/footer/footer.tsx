@@ -68,8 +68,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-neutral-950  to-orange-950">
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:pt-24 lg:px-8 ">
+    <footer className="bg-gradient-to-b from-neutral-950  to-amber-900">
+      <div className="mx-auto max-w-7xl px-6 pt-32 pb-8  lg:px-8 ">
         <div className="mx-auto max-w-2xl text-center">
           <hgroup>
             <h2 className="text-base/7 font-semibold text-orange-400">

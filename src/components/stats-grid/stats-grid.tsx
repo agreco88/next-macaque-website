@@ -8,8 +8,6 @@ import {
   WandSparkles,
 } from "lucide-react"; //Icons for cards
 import { StatsGridWrapper } from "./stats-grid-wrapper"; // server-component
-import { StatsGridBanner } from "./stats-grid-banner"; // server-component
-// import { StatsGridTitle } from "./stats-grid-title"; /// server-component
 import { GridCard } from "../stats-grid-cards/grid-card"; // client-component
 import { GridCardPricing } from "../stats-grid-cards/grid-card-pricing"; // client-component
 import { GridCardProtein } from "../stats-grid-cards/grid-card-protein"; // client-component
@@ -18,20 +16,12 @@ import { FirstCard } from "../stats-grid-cards/grid-first-card";
 
 export const StatsGrid = async () => {
   const t = await getTranslations("StatsGrid");
-  const tFirstCard = await getTranslations("StatsGrid.firstCard");
-  const tLastCardCTA = await getTranslations("StatsGrid.cta");
 
   return (
     <section
       id="whymacaque"
       className="bg-gradient-to-t from-neutral-950 via-neutral-950 to-neutral-900 min-h-screen w-full text-neutral-50 content-center lg:py-12"
     >
-      {/* <StatsGridTitle
-        kicker={t("kicker")}
-        title={t("title")}
-        description={t("description")}
-      /> */}
-
       {/* 1) header row */}
       <StatsGridWrapper variant="first">
         <FirstCard />
