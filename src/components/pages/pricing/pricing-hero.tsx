@@ -13,7 +13,7 @@ export const PricingHero = () => {
   return (
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <div className="relative z-10">
-        <h2 className="mx-auto max-w-4xl text-center text-5xl font-semibold tracking-tight text-balance text-white sm:text-6xl">
+        <h2 className="mx-auto max-w-4xl text-center text-5xl font-semibold tracking-tight text-balance  text-white sm:text-6xl">
           Plans that adapts to your needs
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-neutral-400 sm:text-xl/8">
@@ -22,7 +22,7 @@ export const PricingHero = () => {
         </p>
         <div className="mt-16 flex justify-center">
           <fieldset aria-label="Payment frequency">
-            <div className="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs/5 font-semibold text-white">
+            <div className="grid  grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs/5 font-semibold text-white">
               <label className="group relative rounded-full px-2.5 py-1 has-checked:bg-orange-500">
                 <input
                   defaultValue="monthly"
@@ -30,7 +30,7 @@ export const PricingHero = () => {
                   onChange={() => setFrequency("monthly")}
                   name="frequency"
                   type="radio"
-                  className="absolute inset-0 appearance-none rounded-full"
+                  className="absolute inset-0 appearance-none rounded-full cursor-pointer"
                 />
                 <span className="text-white">Monthly</span>
               </label>
@@ -41,7 +41,7 @@ export const PricingHero = () => {
                   onChange={() => setFrequency("annually")}
                   name="frequency"
                   type="radio"
-                  className="absolute inset-0 appearance-none rounded-full"
+                  className="absolute inset-0 appearance-none rounded-full cursor-pointer"
                 />
                 <span className="text-white">One time</span>
               </label>
@@ -67,7 +67,7 @@ export const PricingHero = () => {
             data-featured={tier.featured ? "true" : undefined}
             className={cn(
               tier.featured
-                ? "z-10 bg-neutral-800 outline-1 -outline-offset-1 outline-orange-500"
+                ? "z-10 bg-neutral-900 outline-1 -outline-offset-1 outline-orange-500  "
                 : "bg-neutral-800/80 outline-1 -outline-offset-1 outline-white/10 lg:bg-transparent lg:pb-14 lg:outline-0",
               "group/tier relative rounded-2xl"
             )}
@@ -75,7 +75,11 @@ export const PricingHero = () => {
             <div className="p-6 lg:pt-12 xl:p-10 xl:pt-14">
               <h3
                 id={`tier-${tier.id}`}
-                className="text-sm/6 font-semibold text-white"
+                className={`"text-sm/6 font-semibold  ${
+                  tier.featured
+                    ? "bg-gradient-to-r from-orange-600 !font-bold to-amber-500 bg-clip-text text-transparent"
+                    : "text-white"
+                }`}
               >
                 MACAQUE™ {tier.name}
               </h3>
@@ -98,9 +102,9 @@ export const PricingHero = () => {
                   name="tier"
                   type="submit"
                   aria-describedby={`tier-${tier.id}`}
-                  className="w-full rounded-md bg-white/10 px-3 py-2 text-center text-sm/6 font-semibold text-white not-group-data-featured:inset-ring not-group-data-featured:inset-ring-white/5 group-data-featured/tier:bg-orange-500 hover:bg-white/20 group-data-featured/tier:hover:bg-orange-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/75 group-data-featured/tier:focus-visible:outline-orange-500"
+                  className="w-full rounded-md cursor-pointer bg-white/10 px-3 py-2 text-center text-sm/6 font-semibold text-white not-group-data-featured:inset-ring not-group-data-featured:inset-ring-white/5 group-data-featured/tier:bg-orange-500 hover:bg-white/20 group-data-featured/tier:hover:bg-orange-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/75 group-data-featured/tier:focus-visible:outline-orange-500"
                 >
-                  Buy this plan
+                  Edit plan and checkout
                 </button>
               </div>
               <div className="mt-8 flow-root sm:mt-10">
