@@ -85,9 +85,9 @@ export const PricingHero = () => {
               </h3>
               <div className="flex  flex-col gap-6 sm:flex-row sm:items-end sm:justify-between lg:flex-col lg:items-stretch">
                 <div className="mt-2 flex items-center gap-x-4">
-                  <p className="text-4xl font-semibold tracking-tight text-white min-w-28 flex items-center">
+                  <div className="text-4xl font-semibold tracking-tight text-white min-w-28 flex items-center">
                     $<AnimateNumber>{tier.price[frequency]}</AnimateNumber>
-                  </p>
+                  </div>
                   <div className="text-sm">
                     <p className="text-white">UYU</p>
                     <p className="text-neutral-400">
